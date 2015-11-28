@@ -13,7 +13,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;; Pipe macro for function composition.
+;; Pipe macros for functional chaining, similar to the UNIX pipe "|" operator.
 ;;-Version: 0.1.0
 (define-module (pipe)
                #:export (-> ->>)
