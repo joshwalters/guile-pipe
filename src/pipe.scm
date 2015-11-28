@@ -13,7 +13,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;; (pipe) -- Pipe macro for function composition.
+;; Pipe macro for function composition.
 ;;-Version: 0.1.0
 (define-module (pipe)
                #:export (-> ->>)
