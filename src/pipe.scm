@@ -20,7 +20,8 @@
                #:version (0 1 0))
 
 ;; Thread first macro.
-;; (eq? 2 (-> 100 (/ 10) (/ 5)))
+;; The first s-expression will be inserted as the firts argument of the next s-expesssion.
+;; Example: (-> 100 (/ 10) (/ 5)) becomes (/ (/ 100 10) 5)
 (define-syntax ->
   (syntax-rules ()
                 ((_) #f)
@@ -32,7 +33,8 @@
                 ))
 
 ;; Thread last macro.
-;; (eq? 50 (->> 100 (/ 10) (/ 5)))
+;; The first s-expression will be inserted as the last argument of the next s-expesssion.
+;; Example: (-> 100 (/ 10) (/ 5)) becomes (/ 5 (/ 10 100))
 (define-syntax ->>
   (syntax-rules ()
                 ((_) #f)

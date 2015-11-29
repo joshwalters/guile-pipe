@@ -1,0 +1,46 @@
+#!/usr/bin/guile -s
+!#
+
+; Print header and general info.
+(display "=======================")
+(newline)
+(display "Install script for pipe")
+(newline)
+(display "=======================")
+(newline)
+(display "This script will install pipe to Guile's site-dir folder.")
+(newline)
+(newline)
+
+; Check if the install script was run as root.
+(if (eq? (getuid) 0)
+         (begin
+           (display "Running as root, can proceed.")
+           (newline))
+         (begin
+           (display "Not running as root. Please rerun with sudo.")
+           (newline)
+           (quit)))
+
+; Define the site dir to install in.
+(define site-dir (%site-dir))
+
+; Inform user of the dir being used.
+(display (string-append "Using '" site-dir "' for installation folder."))
+(newline)
+
+; Create the site-dir if it does not exist.
+(display (string-append "Creating '" site-dir "' if it does not exist... "))
+(system (string-append "mkdir -p " site-dir))
+(display "done.")
+(newline)
+
+; Copy to site dir.
+(display (string-append "Copying './src/pipe' to '" site-dir "' install folder... "))
+(system (string-append "cp ./src/pipe.scm " site-dir))
+(display "done.")
+(newline)
+
+; Done message.
+(display "Finished installation.")
+(newline)
