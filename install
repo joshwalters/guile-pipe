@@ -36,8 +36,8 @@
 (newline)
 
 ; Copy to site dir.
-(display (string-append "Copying './src/pipe' to '" site-dir "' install folder... "))
-(system (string-append "cp ./src/pipe.scm " site-dir))
+(display (string-append "Copying './pipe' to '" site-dir "' install folder... "))
+(system (string-append "cp ./pipe.scm " site-dir))
 (display "done.")
 (newline)
 
