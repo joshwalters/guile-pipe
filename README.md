@@ -12,6 +12,14 @@ Provides identical functionality to Clojure's function threading macros (-> and 
 
 Run `sudo ./install` to install pipe to Guile's site-dir folder.
 
+## Alternative Installation
+
+The [guixrus channel](https://git.sr.ht/~whereiseveryone/guixrus) also provides guile-pipe.
+
+After [adding guixrus](https://git.sr.ht/~whereiseveryone/guixrus#permanent) to your [channels.scm](https://guix.gnu.org/manual/en/html_node/Using-a-Custom-Guix-Channel.html) run the following:
+
+`guix install guile-pipe-guixrus`
+
 ## Usage
 
 Import pipe with
